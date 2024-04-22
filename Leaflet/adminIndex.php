@@ -1,0 +1,11 @@
+<?php
+    session_start();
+    if(isset($_SESSION['adminUser'])){
+        header("location:adminMain.php");
+    }
+    else{
+        if(!isset($_SESSION['adminUser'])){
+            header("location:adminLogin.php");
+        }
+    }
+?>
